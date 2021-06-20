@@ -1,6 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
+const Subscription = require('./resolvers/Subscription');
+
 const Query = require('./resolvers/Query');
 const Mutation = require('./resolvers/Mutation');
 const User = require('./resolvers/User');
@@ -16,6 +18,7 @@ const pubsub = new PubSub();
 const resolvers = {
   Query,
   Mutation,
+  Subscription,
   User,
   Link,
 };
