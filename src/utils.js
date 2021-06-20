@@ -6,6 +6,7 @@ function getTokenPayload(token) {
   return jwt.verify(token, APP_SECRET);
 }
 
+// The getUserId function is a helper function that you’ll call in resolvers which require authentication (such as post). It first retrieves the Authorization header (which contains the User’s JWT) from the context. It then verifies the JWT and retrieves the User’s ID from it.
 function getUserId(req, authToken) {
   if (req) {
     const authHeader = req.headers.authorization;
